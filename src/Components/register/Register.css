@@ -1,0 +1,49 @@
+.register{
+   
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: aqua;
+    height: 88vh;
+    width: 400px;
+   box-shadow: 2px 2px 5px black;
+}
+
+.register > input{
+   border-radius: 8px;
+   border: 1px solid black;
+    width: 91%;
+   height: 1.5rem;
+   outline: none;
+    margin: 0.5rem 0;
+    padding: o.5rem 0.75rem;
+    font-size: 0.9rem ;
+
+
+}
+.register > button{
+    background-color: cornflowerblue;
+   
+    border: 1px solid rgb(43, 32, 54);
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    width: 92%;
+    height: 7%;
+    border: 0ex;
+    
+    
+}
+
+.register > button:hover{
+    background-color: rgb(92, 92, 195);
+    
+}
+
+.register > img{
+   height: 7rem;
+   margin-top: 10px;
+    
+}

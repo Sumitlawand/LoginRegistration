@@ -1,0 +1,33 @@
+.homepage{
+
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+    background-color: rgb(146, 134, 156);
+    box-shadow: black;
+    border-radius: 20px;
+
+}
+
+.homepage > .button{
+    background-color: cornflowerblue;
+    color: white;
+    outline: none;
+   
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    border-radius: 9px;
+    font-size: 1rem;
+
+
+   
+}
+.homepage > .button:hover{
+    background-color: blueviolet;
+
+}
