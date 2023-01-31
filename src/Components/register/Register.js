@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./Register.css";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
 
 
 const Register=()=>{
@@ -16,6 +17,8 @@ const Register=()=>{
 
     });
 
+    const History = useHistory()
+
     const handelchange = (e)=>{
      const {name, value} = e.target
      setUser({
@@ -29,7 +32,8 @@ const Register=()=>{
         if(name && email && password && (password === reEnterpassword)){
           
             axios.post("http://localhost:9002/register", user)
-            .then( reg => console.log())
+            // .then( reg => res.data.user)
+            History.push("/Login")
         }else{
             alert("envalid Input")
         }
@@ -53,7 +57,7 @@ const Register=()=>{
     <br />  <br />
     <button className="button" type="Submit" onClick={ register }>Register </button>  <br />
     or  <br />
-    <button className="button" type="Submit">Login </button>
+    <button className="button" type="Submit" onClick={()=> History.push("/login")}>Login </button>
         
     </div>
     )

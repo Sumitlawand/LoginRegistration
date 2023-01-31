@@ -7,7 +7,7 @@ import { useHistory } from "react-router-dom";
 
 
 
-const Login = () => {
+const Login = ({setLoginUser}) => {
 
     const [log, setLog ]=useState({
 
@@ -32,6 +32,8 @@ const Login = () => {
       const login = () =>{
          axios.post("http://localhost:9002/login", log)
          .than(res =>alert("Sussfuily loged in"))
+        //  setLoginUser(res.data.user)
+         History.push("/")
 
       }
 
@@ -41,7 +43,7 @@ const Login = () => {
     return(
          
         <div className="login">
-           {console.log(log)}
+         
             <img src='./images/logo.png' alt=''></img>
             <h1>Login</h1>
         <input type='email'name=''  vale='' onChange={handelchange} placeholder="Enter your Email Address"></input>
@@ -50,7 +52,7 @@ const Login = () => {
         <br />  <br />
         <button className="button" onClick={login} type="Submit">Login </button>  <br />
         or  <br />
-        <button className="button" type="Submit">Register </button>
+        <button className="button" type="Submit" onClick={() => History.push("/Register") }>Register </button>
         
         </div>
     )
